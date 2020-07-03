@@ -21,21 +21,22 @@
         <image src="https://user-images.githubusercontent.com/62355596/86497889-699b2f80-bd51-11ea-8f8f-0f0eb8780fec.png" />
         <image width="300" height="600" src="https://user-images.githubusercontent.com/62355596/86497900-71f36a80-bd51-11ea-81b4-a4ff88fcc9f2.png" />
         <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497924-88012b00-bd51-11ea-92d5-ed82d93d4816.png" />
-             
+        <image src=" https://user-images.githubusercontent.com/62355596/86497991-d57d9800-bd51-11ea-9242-3e7f43b68f2d.png" />
+        
        
-    </p>
+                 </p>
 
 ## About :memo:
 
-An mini virtual enterprise app with authenticated routes and login
+A simple planner
 
 ## Technologies :rocket:
 
 -   <a href="https://pt-br.reactjs.org/"> ⚛ **React** — A library to build user interfaces</a>
 -   <a href="https://styled-components.com/">💅 **CSS** — Styled-components</a>
 -   <a href="https://eslint.org/">💖 **Lint** — ESlint/Prettier/Editor Config</a>
--   <a href="https://date-fns.org/">⌚ **Date-Fns** — A consistent toolset for manipulating JavaScript dates in a browser & Node.js.</a>
--   <a href="https://reacttraining.com/react-router/">🗺 **React-Router** — Declarative Routing for React.js </a>
+-   <a href="https://jestjs.io/">⚡ **Jest** — A consistent toolset for manipulating JavaScript dates in a browser & Node.js.</a>
+-   <a href="https://testing-library.com/docs/react-testing-library/intro">🗺 **React-Testing-Library** — Declarative Routing for React.js </a>
 -   <a href="https://github.com/axios/axios"> 🌐 **Axios** — Promise based HTTP client for the browser and Node.js </a>
 
 ## How to Contribute 🤔
