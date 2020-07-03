@@ -1,9 +1,9 @@
-<h1>LabeX</h1>
+<h1>Planner</h1>
 
 <p align="center">
-<image width="300" height="300" src="https://user-images.githubusercontent.com/62355596/85961137-5ade0280-b976-11ea-971d-6c0095909b3b.png"/></br>
+<image width="300" height="300" src="(https://user-images.githubusercontent.com/62355596/86497691-9c90f380-bd50-11ea-98ef-950be8f0055d.png"/></br>
 <label>Logo - Created by Victor Gutierrez</label> </br>
-<a href="http://thelabexcompany.surge.sh/"> Click here to see it running </a>
+<a href="plannerbyvg.surge.sh"> Click here to see it running </a>
 </p>
 
 <p align="center">
@@ -16,10 +16,13 @@
 ## Apresentation of Project :sparkles:
 
 <p align="center">
-<image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/85961158-7f39df00-b976-11ea-81b3-0c63fcd183c0.png" />
-        <image src="https://user-images.githubusercontent.com/62355596/85961789-dc379400-b97a-11ea-80df-f4491ab55b6f.gif" />
-    <image src="https://user-images.githubusercontent.com/62355596/85961688-2f5d1700-b97a-11ea-8d8d-154c1996d3d0.gif" />
-     <image src="https://user-images.githubusercontent.com/62355596/85961942-e4dc9a00-b97b-11ea-9670-94de1d1bad45.png" />
+<image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497877-5ab47d00-bd51-11ea-811d-5d9918073392.png" />
+        <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497877-5ab47d00-bd51-11ea-811d-5d9918073392.png" />
+        <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497889-699b2f80-bd51-11ea-8f8f-0f0eb8780fec.png" />
+        <image width="300" height="600" src="https://user-images.githubusercontent.com/62355596/86497900-71f36a80-bd51-11ea-81b4-a4ff88fcc9f2.png" />
+        <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497924-88012b00-bd51-11ea-92d5-ed82d93d4816.png" />
+             
+       
     </p>
 
 ## About :memo:
