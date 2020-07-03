@@ -1,7 +1,7 @@
 <h1>Planner</h1>
 
 <p align="center">
-<image width="300" height="300" src="(https://user-images.githubusercontent.com/62355596/86497691-9c90f380-bd50-11ea-98ef-950be8f0055d.png"/></br>
+<image width="300" height="300" src="(https://user-images.githubusercontent.com/62355596/86497963-aff08e80-bd51-11ea-9c5d-cf542411cbf5.png"/></br>
 <label>Logo - Created by Victor Gutierrez</label> </br>
 <a href="plannerbyvg.surge.sh"> Click here to see it running </a>
 </p>
@@ -18,7 +18,7 @@
 <p align="center">
 <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497877-5ab47d00-bd51-11ea-811d-5d9918073392.png" />
         <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497877-5ab47d00-bd51-11ea-811d-5d9918073392.png" />
-        <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497889-699b2f80-bd51-11ea-8f8f-0f0eb8780fec.png" />
+        <image src="https://user-images.githubusercontent.com/62355596/86497889-699b2f80-bd51-11ea-8f8f-0f0eb8780fec.png" />
         <image width="300" height="600" src="https://user-images.githubusercontent.com/62355596/86497900-71f36a80-bd51-11ea-81b4-a4ff88fcc9f2.png" />
         <image width="500" height="300" src="https://user-images.githubusercontent.com/62355596/86497924-88012b00-bd51-11ea-92d5-ed82d93d4816.png" />
              
