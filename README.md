@@ -28,19 +28,19 @@ A simple planner
 
 ## Technologies :rocket:
 
--   <a href="https://pt-br.reactjs.org/"> ⚛ **React** — A library to build user interfaces</a>
--   <a href="https://styled-components.com/">💅 **CSS** — Styled-components</a>
--   <a href="https://eslint.org/">💖 **Lint** — ESlint/Prettier/Editor Config</a>
--   <a href="https://jestjs.io/">⚡ **Jest** — A delightful JavaScript Testing Framework with a focus on simplicity.</a>
--   <a href="https://testing-library.com/docs/react-testing-library/intro">🗺 **React-Testing-Library** — Declarative Routing for React.js </a>
--   <a href="https://github.com/axios/axios"> 🌐 **Axios** — Promise based HTTP client for the browser and Node.js </a>
+- <a href="https://pt-br.reactjs.org/"> ⚛ **React** — A library to build user interfaces</a>
+- <a href="https://styled-components.com/">💅 **CSS** — Styled-components</a>
+- <a href="https://eslint.org/">💖 **Lint** — ESlint/Prettier/Editor Config</a>
+- <a href="https://jestjs.io/">⚡ **Jest** — A delightful JavaScript Testing Framework with a focus on simplicity.</a>
+- <a href="https://testing-library.com/docs/react-testing-library/intro">🗺 **React-Testing-Library** — Testing for React.js </a>
+- <a href="https://github.com/axios/axios"> 🌐 **Axios** — Promise based HTTP client for the browser and Node.js </a>
 
 ## How to Contribute 🤔
 
--   Fork this repository;
--   Create a branch with your feature: `git checkout -b my-feature`;
--   Commit your changes: `git commit -m 'feat: my new feature'`;
--   Push to your branch: `git push origin my-feature`.
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: my new feature'`;
+- Push to your branch: `git push origin my-feature`.
 
 ## License :scroll:
 

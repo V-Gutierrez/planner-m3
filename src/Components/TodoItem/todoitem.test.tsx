@@ -7,7 +7,9 @@ import TodoItem from './todoitem';
 
 describe('TodoItem funcionalities', () => {
   test('TodoItem should render properly based on passed props', () => {
-    const { getByText } = render(<TodoItem id="TaskID" text="TaskName" />);
+    const { getByText } = render(
+      <TodoItem done={false} id="TaskID" text="TaskName" />,
+    );
     const TaskTitle = getByText('TaskName');
 
     expect(TaskTitle).toBeInTheDocument();
@@ -15,7 +17,7 @@ describe('TodoItem funcionalities', () => {
 
   test('Edit mode should be reachable', () => {
     const { getByText, getByPlaceholderText } = render(
-      <TodoItem id="TaskID" text="TaskName" />,
+      <TodoItem id="TaskID" text="TaskName" done={false} />,
     );
 
     const EditToggle = getByText('Editar');
@@ -31,7 +33,7 @@ describe('TodoItem funcionalities', () => {
       getByPlaceholderText,
       queryByText,
       queryByPlaceholderText,
-    } = render(<TodoItem id="TaskID" text="TaskName" />);
+    } = render(<TodoItem done={false} id="TaskID" text="TaskName" />);
 
     const EditToggle = getByText('Editar');
 
@@ -47,9 +49,9 @@ describe('TodoItem funcionalities', () => {
     expect(queryByPlaceholderText('Insira o novo conteúdo')).toBeNull();
   });
 
-  test('Edit mode should close in ESC keypress', () => {
+  test('Edit mode should dismiss in ESC keypress', () => {
     const { getByText, getByPlaceholderText, queryByText } = render(
-      <TodoItem id="TaskID" text="TaskName" />,
+      <TodoItem done={false} id="TaskID" text="TaskName" />,
     );
 
     const EditToggle = getByText('Editar');
@@ -63,25 +65,25 @@ describe('TodoItem funcionalities', () => {
     expect(queryByText('Insira o novo conteúdo')).toBeNull();
   });
 
-  test('User should be able to perform a non-persistent completion of task', () => {
-    const { getByText } = render(<TodoItem id="TaskID" text="TaskName" />);
-
-    const TaskText = getByText('TaskName');
-    const CompleteButton = getByText('Completar');
-
-    userEvent.click(CompleteButton);
-
-    expect(TaskText).toHaveStyle('text-decoration: line-through');
-    expect(CompleteButton).toHaveTextContent('Atividade Completa!');
-  });
-
   test('Delete task button should render properly', async () => {
-    const { getByText } = render(<TodoItem id="TaskID" text="TaskName" />);
+    const { getByText } = render(
+      <TodoItem done={false} id="TaskID" text="TaskName" />,
+    );
 
     const DeleteButton = getByText('Deletar');
 
     userEvent.click(DeleteButton);
 
     expect(DeleteButton).not.toBeNull();
+  });
+  test('User should not be able to complete an already completed task', async () => {
+    const { queryByText } = render(
+      <TodoItem done={true} id="TaskID" text="TaskName" />,
+    );
+
+    const completedButton = queryByText('Atividade Completa!');
+
+    expect(queryByText('Completar')).not.toBeInTheDocument();
+    expect(completedButton).toBeInTheDocument();
   });
 });

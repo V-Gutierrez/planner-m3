@@ -1,13 +1,13 @@
 import React from 'react';
-import { TaskBox, TaskText } from './todoitem_styles';
+import { TaskBox, TaskText, CompleteButton } from './todoitem_styles';
 import { useState, useContext } from 'react';
-import { deleteTask } from './todoitem_services';
+import { deleteTask, completeTask, editTask } from './todoitem_services';
 import { TodoItemProps } from '../../Types';
 import { smartReloadContext } from '../../Context/smartReload/smartReload';
 
-const TodoItem = ({ text, id }: TodoItemProps) => {
+const TodoItem = ({ text, id, done }: TodoItemProps) => {
   const [editMode, setEditMode] = useState<boolean>(false);
-  const [completed, setCompletion] = useState<boolean>(false);
+  const [editContent, setEditContent] = useState<string>('');
   const { Load } = useContext(smartReloadContext);
 
   const closeEditMode = (event: React.KeyboardEvent) => {
@@ -17,39 +17,60 @@ const TodoItem = ({ text, id }: TodoItemProps) => {
   };
 
   const handleDelete = async (id: string) => {
-    await deleteTask(id)
-      .then(() => {
+    await deleteTask(id).then(() => {
+      Load();
+    });
+  };
+
+  const handleComplete = async () => {
+    if (done !== true) {
+      await completeTask(id).then(() => {
         Load();
-      })
-      .catch((error) => {
-        console.error(error);
       });
+    }
+  };
+
+  const handleEdit = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEditContent(e.target.value);
+  };
+
+  const sendEdit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await editTask(id, editContent).then(() => {
+      Load();
+      setEditContent('');
+    });
   };
 
   return (
     <TaskBox data-testid="task-box" onKeyDown={(e) => closeEditMode(e)}>
-      <TaskText completion={completed}>{text}</TaskText>
+      <TaskText completion={done}>{text}</TaskText>
 
-      {editMode ? (
+      {editMode === true && done === false ? (
         <>
-          <input placeholder="Insira o novo conteúdo" type="text" />
-          <button disabled title="Não suportado pela API, apenas demonstrativo">
-            Enviar
-          </button>
+          <form onSubmit={sendEdit}>
+            <input
+              required
+              minLength={3}
+              onChange={handleEdit}
+              placeholder="Insira o novo conteúdo"
+              type="text"
+              value={editContent}
+            />
+            <button type="submit">Enviar</button>
+          </form>
           <button onClick={() => setEditMode(false)}>Cancelar</button>
         </>
       ) : (
         <>
-          <button
-            style={{
-              background: completed ? '#d05a76' : 'white',
-              color: completed ? 'white' : 'black',
-            }}
-            onClick={() => setCompletion((prev) => !prev)}
-          >
-            {completed ? 'Atividade Completa!' : 'Completar'}
-          </button>
-          <button onClick={() => setEditMode(true)}>Editar</button>
+          <CompleteButton onClick={handleComplete} completion={done}>
+            {done ? 'Atividade Completa!' : 'Completar'}
+          </CompleteButton>
+          {!done ? (
+            <button onClick={() => setEditMode(true)}>Editar</button>
+          ) : (
+            <></>
+          )}
           <button onClick={() => handleDelete(id)}>Deletar</button>
         </>
       )}
