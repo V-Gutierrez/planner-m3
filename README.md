@@ -1,7 +1,7 @@
 <h1>Planner</h1>
 <p align="center">
 <label>Created by Victor Gutierrez</label> </br>
-<a href="plannerbyvg.surge.sh"> Click here to see it running </a>
+<a href="http://plannerbyvg.surge.sh"> Click here to see it running </a>
 </p>
 
 <p align="center">
